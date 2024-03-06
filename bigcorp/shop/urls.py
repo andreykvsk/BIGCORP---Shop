@@ -1,0 +1,10 @@
+from django.contrib import admin
+from django.urls import path
+
+from .views import product_detail_view, products_view, category_list
+
+urlpatterns = [
+    path('', products_view, name='products'),
+    path('<slug:slug>/', product_detail_view, name='product_detail'),
+    path('search/<slug:slug>', category_list, name='category_list')
+]
