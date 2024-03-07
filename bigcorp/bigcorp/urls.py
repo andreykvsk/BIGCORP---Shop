@@ -10,6 +10,7 @@ from bigcorp.settings import MEDIA_ROOT
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/', include(('shop.urls', 'shop'))),
+    path('cart/', include(('cart.urls', 'cart'))),
 ]
 
 if settings.DEBUG:
